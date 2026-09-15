@@ -2,16 +2,26 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Green Console Loop</title>
+    <title>Random 500 Chars Loop</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>F</h1>
 
     <script>
-        // 開発者ツールのコンソールに無限に文字をプリントし続けます
-        // ※ブラウザがフリーズするのを防ぐため、ミリ秒単位のわずかな隙間（1ミリ秒）を空けて実行します
+        // ランダムな50文字を生成する関数
+        function generateRandomString() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < 500; i++) {
+                // キャラクターの一覧からランダムに1文字選んで繋げる
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        // 1ミリ秒ごとにコンソールへ出力
         setInterval(() => {
-            console.log("GREENGREENGREENGREENGREEN");
+            console.log(generateRandomString());
         }, 1);
     </script>
 </body>
