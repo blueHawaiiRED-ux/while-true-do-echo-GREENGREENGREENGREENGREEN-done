@@ -5,15 +5,15 @@
     <title>Random 500 Chars Loop</title>
 </head>
 <body>
-    <h1>F</h1>
+    <h1>F12キーを押して「コンソール（Console）」を開いてください</h1>
 
     <script>
-        // ランダムな50文字を生成する関数
+        // ランダムな500文字を生成する関数
         function generateRandomString() {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             let result = '';
+            // ループ回数を 50 から 500 に変更
             for (let i = 0; i < 500; i++) {
-                // キャラクターの一覧からランダムに1文字選んで繋げる
                 result += characters.charAt(Math.floor(Math.random() * characters.length));
             }
             return result;
